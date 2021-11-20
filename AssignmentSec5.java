@@ -15,16 +15,16 @@ public class AssignmentSec5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      AbstractMember CSam= MemberProducer.GetDepartement("CS") ;
-      Staff CSsttafDR = CSam.GetMember("doctor cs");
-      Staff CSstfTS = CSam.GetMember("teaching assistant cs");
-      CSsttafDR.getSallary();
-      CSstfTS.getSallary();
-      AbstractMember ISam= MemberProducer.GetDepartement("is") ;
-      Staff ISstafDR = ISam.GetMember("doctor is");
-      Staff ISstafTS = ISam.GetMember("teaching assistant is");
-      ISstafDR.getSallary();
-      ISstafTS.getSallary();
+       MemeberFactory memef = new MemeberFactory();
+       String MemeName="doctor";
+       String MemName2="teaching Assistant"; 
+       Staff stff = memef.getMember(MemeName);
+       stff.getSallary();
+       stff.getYearsOfWork();
+       
+       Staff stff2 = memef.getMember(MemName2);
+       stff2.getSallary();
+       stff2.getYearsOfWork();
     }
     
 }
